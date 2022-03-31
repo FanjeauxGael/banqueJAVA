@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Creation réussite</title>
+    <style type="text/css">
+        span{
+            display: inline-block;
+            width: 200px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div align="left">
+        <h2>Creation réussite !</h2>
+        <span>nom : <span th:text="${client.nom}"></span></span><br>
+        <span>prénom : <span th:text="${client.prenom}"></span></span><br>
+        <span>email : <span th:text="${client.email}"></span></span><br>
+        <span>mot de passe : <span th:text="${client.motDePasse}"></span></span><br>
+        <span>profession : <span th:text="${client.profession}"></span></span><br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Compte</title>
+</head>
+<body>
+<h1>Page du compte <span th:text="${compte.id}"></span> </h1>
+    <h4>Numero</h4>
+    <p data-th-text="${compte.numero}"/>
+    <h4>Montant</h4>
+    <p data-th-text="${compte.montant}"/>
+    <h4>Client</h4>
+    <p data-th-text="${compte.client.nom}"/>
+</body>
+</html>

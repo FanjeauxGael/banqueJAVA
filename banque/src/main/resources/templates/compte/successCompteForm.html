@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Creation réussite</title>
+    <style type="text/css">
+        span{
+            display: inline-block;
+            width: 200px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div align="left">
+    <h2>Creation réussite !</h2>
+    <span>Nom Du Compte : <span th:text="${compte.nomDuCompte}"></span></span><br>
+    <span>Montant : <span th:text="${compte.montant}"></span></span><br>
+    <span>date Creation : <span th:text="${compte.dateCreation}"></span></span><br>
+</div>
+</body>
+</html>

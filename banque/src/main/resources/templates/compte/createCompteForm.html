@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>formulaire d'inscription</title>
+    <style type="text/css">
+        label {
+            display: inline-block;
+            width: 200px;
+            margin: 5px;
+            text-align: left;
+        }
+        input[type=text], input[type=password], select {
+            display: inline-block;
+            width: 200px;
+        }
+        input[type=radio] {
+            margin-left: 45px;
+        }
+        input[type=checkbox] {
+            margin-right: 190px;
+        }
+        button {
+            padding: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div align="left">
+    <h1>formulaire d'inscription</h1>
+    <!-- zone pour le formulaire -->
+</div>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Créer un compte</title>
+</head>
+<body>
+<div align="left">
+    <h1>Créer un compte</h1>
+    <form action="#" th:action="@{/compte/creer}" method="post" th:object="${compte}">
+        <label>numero du compte :</label>
+        <input type="text" th:field="*{numero}"><br>
+        <label>montant :</label>
+        <input type="text" th:field="*{montant}"><br>
+        <label>Utilisateur</label>
+        <select th:field="*{client}">
+            <option th:each="Linkclient : ${clients}" th:value="${Linkclient.id}" th:text="${Linkclient.nom}"></option>
+        </select>
+        <button type="submit">valider</button><br>
+    </form>
+</div>
+</body>

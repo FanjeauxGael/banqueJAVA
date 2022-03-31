@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Client</title>
+</head>
+<body>
+    <h1>Page du client <span th:text="${client.id}"></span> </h1>
+    <h4>Nom</h4>
+    <p data-th-text="${client.nom}"/>
+    <h4>Prenom</h4>
+    <p data-th-text="${client.prenom}"/>
+</body>
+</html>
